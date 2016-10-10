@@ -1,8 +1,9 @@
 var express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    Task = require('../models/task');
 
-router.get('/tasks', function (req, res, next) {
-    res.send('TASKS API');
-});
+Task.methods(['get', 'post', 'put', 'delete']);
+
+Task.register(router, '/tasks');
 
 module.exports = router;

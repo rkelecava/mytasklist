@@ -3,6 +3,10 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose');
 
+require('./models/task');
+
+mongoose.connect('mongodb://localhost/mytasklist');
+
 var index = require('./routes/index'),
     tasks = require('./routes/tasks');
 

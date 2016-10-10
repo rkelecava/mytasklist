@@ -1,1 +1,4 @@
 node_modules/
+client/node_modules/
+client/typings/
+client/bower_components/
